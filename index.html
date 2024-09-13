@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kiaxon</title>
     <link rel="stylesheet" href="./index.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.35/vue.global.min.js'
+        integrity='sha512-vzFWLyTMc9jMrXLzc/qQcbr/lJPmQBlYkLrdxmykQ9Uidz5K0Z9orAVJgA2iS0z0Ow3kpMNn+a+JZRoKK1v10g=='
+        crossorigin='anonymous'></script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    -->
 </head>
 
 <body>
@@ -18,9 +22,9 @@
         <ul id="tools">
             <li><a href="#head">首頁</a></li>
             <li><a href="#me">關於IDLE</a></li>
-            <li><a href="#party">活動資訊</a></li>
-            <li><a href="#shop">購買專輯</a></li>
-            <li><a href="#head">首頁</a></li>
+            <li><a href="#party">活動資訊站</a></li>
+            <li><a href="#shop">專輯樂庫</a></li>
+            <li><a href="#end">留下足跡</a></li>
         </ul>
     </section>
     <!-- 1 -->
@@ -132,38 +136,35 @@
             <div><img src="./images/" alt=""></div>
         </div> -->
         <div class="wrap">
-            <h1>近期活動</h1>
+            <h1>活動資訊站</h1>
             <div id="party-cards">
                 <div class="party-card">
-                    <img src="./images/partyimg1.png" alt="">
-                    <h2>夏日新專回歸!</h2>
+                    <img class="party-img" src="./images/partyimg1.png" alt="">
+                    <h2>巡迴演唱會即將開跑!</h2>
                     <p>女團(G)I-DLE即將華麗回歸！
                         她們將帶著全新的音樂與概念，再次征服你的耳朵和心靈。
                         這次的專輯充滿了創意與熱情，無論你是老粉還是新粉，絕對不容錯過。
                         讓我們一起期待(G)I-DLE在舞台上閃耀，再次展現她們無限的魅力與實力！
-                        準備好跟隨她們的節奏，享受這次精彩的音樂旅程吧！
                     </p>
                     <button>查看更多</button>
                 </div>
                 <div class="party-card">
-                    <img src="./images/partyimg1.png" alt="">
-                    <h2>夏日新專回歸!</h2>
+                    <img class="party-img" src="./images/partyimg3.png" alt="">
+                    <h2>SuperLady新專回歸!</h2>
                     <p>女團(G)I-DLE即將華麗回歸！
                         她們將帶著全新的音樂與概念，再次征服你的耳朵和心靈。
                         這次的專輯充滿了創意與熱情，無論你是老粉還是新粉，絕對不容錯過。
                         讓我們一起期待(G)I-DLE在舞台上閃耀，再次展現她們無限的魅力與實力！
-                        準備好跟隨她們的節奏，享受這次精彩的音樂旅程吧！
                     </p>
                     <button>查看更多</button>
                 </div>
                 <div class="party-card">
-                    <img src="./images/partyimg1.png" alt="">
-                    <h2>夏日新專回歸!</h2>
+                    <img class="party-img" src="./images/partyimg2.png" alt="">
+                    <h2>夏日新專I SWAY回歸!</h2>
                     <p>女團(G)I-DLE即將華麗回歸！
                         她們將帶著全新的音樂與概念，再次征服你的耳朵和心靈。
                         這次的專輯充滿了創意與熱情，無論你是老粉還是新粉，絕對不容錯過。
                         讓我們一起期待(G)I-DLE在舞台上閃耀，再次展現她們無限的魅力與實力！
-                        準備好跟隨她們的節奏，享受這次精彩的音樂旅程吧！
                     </p>
                     <button>查看更多</button>
                 </div>
@@ -179,43 +180,39 @@
 
     <!-- 1 -->
 
-    <section id="shop">
-        <p>商品資訊</p>
+    <section id="shop" class="app">
+        <p>專輯樂庫</p>
         <div id="shopall">
-            <div id="shopend"></div>
-            <div id="shopcards">
-                <div class="shopcd">
-                    <img src="./images/shop1.png" alt="">
-                    <h2>SuperLady</h2>
-                    <div class="cardbt">
-                        <button>+</button>
-                        <input type="text">
-                        <button>-</button>
-                    </div>
-                </div>
-                <div class="shopcd">
-                    <img src="./images/shop2.png" alt="">
-                    <h2>I SWAY</h2>
-                    <div class="cardbt">
-                        <button>+</button>
-                        <input type="text">
-                        <button>-</button>
-                    </div>
-                </div>
-                <div class="shopcd">
-                    <img src="./images/shop3.png" alt="">
-                    <h2>QueenCard</h2>
-                    <div class="cardbt">
-                        <button>+</button>
-                        <input type="text">
-                        <button>-</button>
-                    </div>
-                </div>
+
+            <div id="shopend">
+              
             </div>
+
+            <div id="shop-cards"></div>
+
         </div>
     </section>
     <section id="end">
+        <i class="endicon">留下足跡</i>
+        <i class="endtxt">快分享你的心得吧!</i>
+        <div class="endbg"></div>
+        <div id="">
+            <div class="end-input">
+                <p>暱稱:</p>
+                <input type="text">
+                <button>送出</button>
+            </div>
 
+        </div>
+
+        <img class="cd" src="./images/end cd.png" alt="">
+        <img class="cdplay" src="./images/cdplay.png" alt="">
+        <div id="footer">
+            <p> <br>G-idle粉絲網站 | 穀保家商 | 0800-000-000 <br>
+                2024 © 聽說Gidle要回歸了，使用CSS、jQuery製作，兼具RWD響應式及AJAX設計
+            </p>
+
+        </div>
     </section>
     <script src="./index.js"></script>
 </body>
