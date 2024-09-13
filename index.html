@@ -6,27 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kiaxon</title>
     <link rel="stylesheet" href="./index.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.35/vue.global.min.js'
+        integrity='sha512-vzFWLyTMc9jMrXLzc/qQcbr/lJPmQBlYkLrdxmykQ9Uidz5K0Z9orAVJgA2iS0z0Ow3kpMNn+a+JZRoKK1v10g=='
+        crossorigin='anonymous'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
 </head>
 
 <body>
     <!-- 1 -->
-    <section id="tool">
+    <nav class="navbar navbar-expand-lg nav-bg fixed-top navbar-light">
+
+        <div class="container-fluid col-10">
+
+            <a href="" class="navbar-brand"><img src="./images/logo.png" alt="" class="a"></a>
+            <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#head" class="nav-link text-light">首頁</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#me" class="nav-link text-light">關於IDLE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#party" class="nav-link text-light">活動資訊站</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#shop" class="nav-link text-light">專輯樂庫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#end" class="nav-link text-light">留下足跡</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- <section id="tool">
         <a href="#head"><img src="./images/logo.png" alt=""></a>
 
         <ul id="tools">
             <li><a href="#head">首頁</a></li>
             <li><a href="#me">關於IDLE</a></li>
-            <li><a href="#party">活動資訊</a></li>
-            <li><a href="#shop">購買專輯</a></li>
-            <li><a href="#head">首頁</a></li>
+            <li><a href="#party">活動資訊站</a></li>
+            <li><a href="#shop">專輯樂庫</a></li>
+            <li><a href="#end">留下足跡</a></li>
         </ul>
-    </section>
+    </section> -->
     <!-- 1 -->
     <section id="head">
 
+        <h1 class="head-title">(<span class="head-tittlegs">G</span>)I-DLE</h1>
+
+        <p class="head-p">(G)I-DLE是韓國Cube娛樂旗下的女子團體 <br>
+            成員包括Miyeon、Minnie、Soyeon、Yuqi和Shuhua。<br>
+            她們以多元音樂風格和強烈個人魅力迅速崛起，代表作有 <br>《LATATA》、《HANN》等，深受全球粉絲喜愛。
+        </p>
+
+        <div id="head-animations">
+            <div class="head-animation"><img src="./images/wide.png" alt=""></div>
+            <div class="head-animation"><img src="./images/活動演唱會.png" alt=""></div>
+            <div class="head-animation"><img src="./images/1280 (4).jpeg" alt=""></div>
+        </div>
     </section>
+
     <!-- 1 -->
     <section id="fg1">
         <div class="icons">
@@ -37,6 +89,8 @@
                 <li></li>
                 <li></li>
                 <li></li>
+
+
             </ul>
             <ul class="icon">
                 <li></li>
@@ -51,10 +105,10 @@
     <!-- 1 -->
     <section id="me">
         <div class="metxt">
-            <h1>關於IDLE</h1>
+            <p class="me-title">關於IDLE</p>
             <p class="txtgd1">(G)I-DLE是韓國Cube娛樂旗下的女子團體</p>
-            <p class="txtp1"> 成員包括Miyeon、Minnie、Soyeon、Yuqi和Shuhua。<br>
-                她們以多元音樂風格和強烈個人魅力迅速崛起，代表作有 <br>《LATATA》、《HANN》等，深受全球粉絲喜愛。</p>
+            <p class="txtp1"> 成員包括Miyeon、Minnie、Soyeon、Yuqi<br>和Shuhua。
+                她們以多元音樂風格和強烈個人魅力 <br>迅速崛起，代表作有《LATATA》、《HANN》 <br>等，深受全球粉絲喜愛。</p>
         </div>
         <div class="imgs">
             <img class="bggs1-1" src="./images/bggs1-1.png" alt="">
@@ -81,14 +135,17 @@
     </section>
     <!-- 1 -->
     <section id="hd">
-        <div class="hd">
-            <div class="hdt">
-                <h1>成員介紹</h1>
-                <p>Gidle總共有五位成員，分別來自韓國、泰國、中國、台灣等 <br>
-                    她們的音樂風格多樣化，涵蓋了流行、嘻哈和電子音樂等多種元素。<br>
-                    自出道以來，(G)I-DLE 已經在國際上獲得了廣泛的關注和支持，<br>
-                    並在音樂節、頒獎典禮等多個舞台上展現了出色的表現。
-                </p>
+        <div class="hd ">
+            <div class="hdt ">
+                <div class="hdtall">
+
+                    <h1>成員介紹</h1>
+                    <p>Gidle總共有五位成員，分別來自韓國、泰國、中國、台灣等 <br>
+                        她們的音樂風格多樣化，涵蓋了流行、嘻哈和電子音樂等多種元素。<br>
+                        自出道以來，(G)I-DLE 已經在國際上獲得了廣泛的關注和支持，<br>
+                        並在音樂節、頒獎典禮等多個舞台上展現了出色的表現。
+                    </p>
+                </div>
             </div>
 
             <div id="hdbt">
@@ -132,91 +189,131 @@
             <div><img src="./images/" alt=""></div>
         </div> -->
         <div class="wrap">
-            <h1>近期活動</h1>
+            <h1>活動資訊站</h1>
             <div id="party-cards">
                 <div class="party-card">
-                    <img src="./images/partyimg1.png" alt="">
-                    <h2>夏日新專回歸!</h2>
+                    <img class="party-img" src="./images/partyimg1.png" alt="">
+                    <h2>巡迴演唱會即將開跑!</h2>
                     <p>女團(G)I-DLE即將華麗回歸！
                         她們將帶著全新的音樂與概念，再次征服你的耳朵和心靈。
                         這次的專輯充滿了創意與熱情，無論你是老粉還是新粉，絕對不容錯過。
                         讓我們一起期待(G)I-DLE在舞台上閃耀，再次展現她們無限的魅力與實力！
-                        準備好跟隨她們的節奏，享受這次精彩的音樂旅程吧！
                     </p>
                     <button>查看更多</button>
                 </div>
                 <div class="party-card">
-                    <img src="./images/partyimg1.png" alt="">
-                    <h2>夏日新專回歸!</h2>
+                    <img class="party-img" src="./images/partyimg3.png" alt="">
+                    <h2>SuperLady新專回歸!</h2>
                     <p>女團(G)I-DLE即將華麗回歸！
                         她們將帶著全新的音樂與概念，再次征服你的耳朵和心靈。
                         這次的專輯充滿了創意與熱情，無論你是老粉還是新粉，絕對不容錯過。
                         讓我們一起期待(G)I-DLE在舞台上閃耀，再次展現她們無限的魅力與實力！
-                        準備好跟隨她們的節奏，享受這次精彩的音樂旅程吧！
                     </p>
                     <button>查看更多</button>
                 </div>
                 <div class="party-card">
-                    <img src="./images/partyimg1.png" alt="">
-                    <h2>夏日新專回歸!</h2>
+                    <img class="party-img" src="./images/partyimg2.png" alt="">
+                    <h2>夏日新專I SWAY回歸!</h2>
                     <p>女團(G)I-DLE即將華麗回歸！
                         她們將帶著全新的音樂與概念，再次征服你的耳朵和心靈。
                         這次的專輯充滿了創意與熱情，無論你是老粉還是新粉，絕對不容錯過。
                         讓我們一起期待(G)I-DLE在舞台上閃耀，再次展現她們無限的魅力與實力！
-                        準備好跟隨她們的節奏，享受這次精彩的音樂旅程吧！
                     </p>
                     <button>查看更多</button>
                 </div>
             </div>
         </div>
         <div class="imgs">
-            <img class="bggs11" src="./images/bggs11.png" alt="">
-            <img class="bggs9" src="./images/bggs9.png" alt="">
-            <img class="bggs13" src="./images/bggs13.png" alt="">
             <img class="bggs10" src="./images/bggs10.png" alt="">
         </div>
     </section>
 
     <!-- 1 -->
-
     <section id="shop">
-        <p>商品資訊</p>
-        <div id="shopall">
-            <div id="shopend"></div>
-            <div id="shopcards">
-                <div class="shopcd">
-                    <img src="./images/shop1.png" alt="">
-                    <h2>SuperLady</h2>
-                    <div class="cardbt">
-                        <button>+</button>
-                        <input type="text">
-                        <button>-</button>
-                    </div>
-                </div>
-                <div class="shopcd">
-                    <img src="./images/shop2.png" alt="">
-                    <h2>I SWAY</h2>
-                    <div class="cardbt">
-                        <button>+</button>
-                        <input type="text">
-                        <button>-</button>
-                    </div>
-                </div>
-                <div class="shopcd">
-                    <img src="./images/shop3.png" alt="">
-                    <h2>QueenCard</h2>
-                    <div class="cardbt">
-                        <button>+</button>
-                        <input type="text">
-                        <button>-</button>
-                    </div>
-                </div>
+        <div class="shop-txt">
+            <h2 class="shop-title"> 專輯樂庫</h2>
+            <P class="shop-p">女團(G)I-DLE即將華麗回歸！
+                她們將帶著全新的音樂與概念， <br>再次征服你的耳朵和心靈。
+                這次的專輯充滿了創意與熱情，
+                <br>無論你是老粉還是新粉，都要來聽聽這些名曲
+            </P>
+        </div>
+        <div class="shop-all">
+            <div class="shops">
+                <img src="./images/活動YUQI個人回歸.png" alt="">
+            </div>
+            <div class="shop-text">
+                <p class="shop-name">FREAK 雨琦個人專輯</p>
+                <p class="shop-math">350元</p>
+            </div>
+            <div class="shop-button">
+                <button>+</button>
+                <input type="text">
+                <button>-</button>
             </div>
         </div>
     </section>
-    <section id="end">
 
+
+
+
+    <!-- end -->
+    <section id="end">
+        <h1>留下足跡</h1>
+        <p>
+    </p>
     </section>
+
+
+
+
+
+    <!-- <p class=> <br>G-idle粉絲網站 | 穀保家商 | 0800-000-000 <br>
+                2024 © 聽說Gidle要回歸了，使用CSS、jQuery製作，兼具RWD響應式及AJAX設計
+            </p> -->
+
+    <!-- <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <h1>1</h1>
+                </div>
+                <div class="col-lg-6 ">
+                    <h1>2</h1>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- <div class="robot-click">
+        人
+    </div>
+
+    <div class="robot">
+        <div class="robot-header">
+            <h2 class="text-light">傻瓜機器人</h2>
+            <button class="btn-close"></button>
+        </div>
+        <div class="robot-body">
+            <p >
+                <span class="rob-1">你好~我是傻瓜機器人</span>
+            </p>
+            <p >
+                <span class="rob-2">喔</span>
+            </p>
+        </div>
+        <div class="robot-footer">
+            <form>
+                <input type="text">
+                <button>送出</button>
+            </form>
+        </div>
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
     <script src="./index.js"></script>
 </body>
 
