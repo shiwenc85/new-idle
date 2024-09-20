@@ -5,122 +5,134 @@ document.querySelectorAll('#hdbt button').forEach(btn => {
     })
 })
 
-document.querySelectorAll('.accordion').forEach(accordion => {
-    accordion.addEventListener('click', () => {
-        accordion.querySelector('.accordion-text').classList.toggle('active')
-    })
-})
 
+// 新增商品
+const shoping = [
+    { name: "i love", price: 380, amount: 0, img: "./images/i love專p.jpg" },
+    { name: "正規2專輯", price: 350, amount: 0, img: "./images/super ladypg.jpg" },
+    { name: "i feel", price: 350, amount: 0, img: "./images/i feel專p.png" },
+];
+
+// 新增商品的樣式
+const shop= document.querySelector(".shop-obj");
+shop.innerHTML = shoping.map((item, a) => `
+
+    <div class="shop-img">  
+        <div class="shops"><img src="${item.img}" alt=""></div>
+        <div class="shop-text">
+            <p class="shop-name">${item.name}</p>
+            <p class="shop-math">${item.price}元</p>
+        </div>
+        
+        <div class="shop-button">
+            <button onclick="updateAmount(${a}, 1)">+</button>
+            <input type="text" class="afew" value="0" readonly>
+            <button onclick="updateAmount(${a}, -1)">-</button>
+        </div>
+    </div>
+`).join('');
+
+// 更新數量並顯示總額
+const amountAll = document.querySelectorAll('.afew');
+const shopend = document.querySelector('#shopend');
+
+// 修改數量
+function updateAmount(index, change) {
+    shoping[index].amount = Math.max(0, shoping[index].amount + change);
+    amountAll[index].value = shoping[index].amount;
+    renderShopend();
+}
+
+// 計算總額
+function getTotalPrice() {
+    return shoping.reduce((total, item) => total + item.price * item.amount, 0);
+}
+
+// 顯示總額
+function renderShopend() {
+    shopend.innerHTML = `<div class="total"> 總計NT$${getTotalPrice()}元`;
+}
+
+renderShopend();
+
+
+
+
+
+
+
+
+
+// 新增商品
 // var products = [
+   
 //     {
-//         name: "SuperLady",
-//         price: 20,
+//         name: "i love",
+//         price: 380,
 //         amount: 0,
-//         img: "./images/shop1.png"
-//     }, {
-//         name: "I SWAY",
-//         price: 30,
-//         amount: 0,
-//         img: "./images/shop2.png"
-//     }, {
-//         name: "Queen Card",
-//         price: 30,
-//         amount: 0,
-//         img: "./images/shop3.png"
+//         img: "./images/i love專p.jpg"
 //     },
-// ]
-// a.forEach((data,index)=>{
-//     const shop =document.querySelector("#shop-cards")
-//     shop.innerHTML +=`
-//      <div class="shopcd"> 
-//                 <img src="${data.img}" alt="">
-//                 <h2>${data.name}</h2>
-//                 <div class="cardbt">
-//                     <button class="ease" onclick="ease(${index})">-</button>
-//                     <label class="afew">${data.amount}</label>
-//                     <button class="add" onclick="add(${index})">+</button>
-//                 </div>
-//       </div>      
+   
+//     {
+//         name: "正規2專輯",
+//         price: 350,
+//         amount: 0,
+//         img: "./images/super ladypg.jpg"
+//     },
+//     {
+//         name: "i feel",
+//         price: 350,
+//         amount: 0,
+//         img: "./images/i feel專p.png"
+//     },
+// ] 
+// // 新增商品的樣式給他功能
+// products.forEach((product, index) => {
+//     const shop = document.querySelector(".shop-obj")
+//     shop.innerHTML += `
+//     <div class="shop-img">
+//         <div class="shops">
+//             <img src="${product.img}" alt="">
+//         </div>
+//         <div class="shop-text">
+//             <p class="shop-name">${product.name}</p>
+//             <p class="shop-math">${product.price}元</p>
+//         </div>
+//         <div class="shop-button">
+//             <button onclick="add(${index})">+</button>
+//             <input type="text" class="afew" value="0">
+//             <button onclick="ease(${index})">-</button>
+//         </div>
+//     </div>  
 //     `
 // });
 
+// // 按鈕加減
+// const amountAll = document.querySelectorAll('.afew')
+// function ease(index) {
+//     products[index].amount = Math.max(0, products[index].amount - 1)
+//     amountAll[index].value = products[index].amount
+//     renderShopend()
+// }
 
-products.forEach((date, index) => {
-    const shop = document.querySelector("#shop-cards")
-    shop.innerHTML += `
-    <div class="shopcd">
-        <img src="${date.img}" alt="">
-        <h2>${date.name}</h2>
-        <div class="cardbt">
-            <button class="ease" onclick = "ease(${index})">-</button>
-            <label class="afew">${date.amount}</label>
-            <button class="add" onclick="add(${index})">+</button>
-        </div>
-    </div>
-    `
-});
+// function add(index) {
+//     products[index].amount += 1
+//     amountAll[index].value = products[index].amount
+//     renderShopend()
+// }
 
-
-function ease(index) {
-    products[index].amount = Math.max(0, products[index].amount - 1)
-    const amountAll = document.querySelectorAll('.afew')
-    amountAll[index].innerHTML = products[index].amount
-    renderShopend()
-}
-
-function add(index) {
-    products[index].amount += 1
-    const amountAll = document.querySelectorAll('.afew')
-    amountAll[index].innerHTML = products[index].amount
-
-    renderShopend()
-}
+// // 顯示總額
+// const shopend = document.querySelector('#shopend')
+// function renderShopend() {
 
 
-const shopend = document.querySelector('#shopend')
-function renderShopend() {
-    shopend.innerHTML = ''
-    products.forEach(product => {
-        if (product.amount > 0) {
-            shopend.innerHTML += `
-            <div class="order-item">
-                <h1>${product.name}</h1>
-                <h1>${product.amount}</h1>
-                <h1>${product.price * product.amount}</h1>
-            </div>`
-        }
-    })
+//     shopend.innerHTML = `<div class="total">總計NT$${getTotalPrice()}元</div>`
+// }
+// renderShopend()
 
-    shopend.innerHTML += `<div class="total">總計NT$${getTotalPrice()}元</div>`
-}
+// function getTotalPrice() {
+//     return products.reduce((sum, product) => {
+//         return product.price * product.amount + sum
+//     }, 0)
+// }
 
-function getTotalPrice() {
-    return products.reduce((sum, product) => {
-        return product.price * product.amount + sum
-    }, 0)
-}
-
-
-// const App = Vue.createApp({
-//     data() {
-//         return {
-//             products: [{
-//                 name: "SuperLady",
-//                 price: 250,
-//                 amount: 0,
-//                 img: "./images/shop1.png"
-//             }, {
-//                 name: "I SWAY",
-//                 price: 300,
-//                 amount: 0,
-//                 img: "./images/shop2.png"
-//             }, {
-//                 name: "QueenCard",
-//                 price: 150,
-//                 amount: 0,
-//                 img: "./images/shop3.png"
-//             },]
-//         }
-//     }
-
-// }).mount('.app')
